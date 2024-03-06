@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body>
+    {% for repository in site.github.public_repositories %}
+      * [{{ repository.name }}]({{ repository.html_url }})<br>
+    {% endfor %}
+  </body>
+</html>
