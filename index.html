@@ -2,8 +2,17 @@
 <html lang="en">
   <head></head>
   <body>
-    {% for repository in site.github.public_repositories %}
-      * [{{ repository.name }}]({{ repository.html_url }})<br>
-    {% endfor %}
+
+    <script>
+      document.querySelector("button").addEventListener("click", async ()=>{
+        try {
+          let res = await fetch("file.glsl");
+          let text = await res.text();
+          alert(text);
+      } catch(e) {
+        alert(e.stack);
+      }
+      });
+    </script>
   </body>
 </html>
